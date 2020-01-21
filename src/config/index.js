@@ -1,7 +1,7 @@
 // import { API_BASE_URL, IMAGE_BASE_URL } from "react-native-dotenv";
 
 const config = {
-  API_BASE_URL: "http://localhost:3001/api/",//"https://neitic.com/accident/?api&action=",
+  API_BASE_URL: "http://server-accident-git-server.apps.us-east-2.starter.openshift-online.com/api/",//"https://neitic.com/accident/?api&action=",
   IMAGE_BASE_URL: "IMAGE_BASE_URL"
 };
 export {
