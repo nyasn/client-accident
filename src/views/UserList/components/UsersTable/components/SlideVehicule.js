@@ -25,7 +25,7 @@ function Banner(props)
     "Auto Voiture": '/images/type_vehicules/voiture.jpg',
     "Bicyclette": '/images/type_vehicules/beka.jpg',
     "Moto":'/images/type_vehicules/moto.jpg',
-    "Taxi-Bé" :'/images/type_vehicules/bus.jpg',
+    "Taxi-Bé" :'/images/type_vehicules/Bus.jpg',
     "Taxi-Ville": '/images/type_vehicules/taxi.jpg',
     "Cammion":'/images/type_vehicules/cammion.jpg',
   };
