@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/styles';
 import {
   Grid,
   Button,
-  IconButton,
+  CircularProgress,
   TextField,
   Typography
 } from '@material-ui/core';
@@ -131,7 +131,8 @@ const SignIn = () => {
     isValid: false,
     values: {},
     touched: {},
-    errors: {}
+    errors: {},
+    load:false,
   });
   const [error,setError] = useState({
     error:false,
@@ -173,12 +174,24 @@ const SignIn = () => {
 
   const handleSignIn = async (event) => {
     event.preventDefault();
+    setFormState(formState => ({
+      ...formState,
+      load:true,
+    }));
     const loggedIN =  await AuthService.login(formState.values)
 
     if(!loggedIN.error && loggedIN.auth){
       history.push('/')
       window.location.reload()
+      setFormState(formState => ({
+        ...formState,
+        load:true,
+      }));
     }else
+      setFormState(formState => ({
+        ...formState,
+        load:true,
+      }));
       // eslint-disable-next-line no-unused-vars
       setError(error=>({
         error:true,
@@ -302,7 +315,15 @@ const SignIn = () => {
                   type="submit"
                   variant="contained"
                 >
-                  Se connecter
+                  { formState.load ?
+                  <CircularProgress
+                    variant="indeterminate"
+                    disableShrink
+                    size={24}
+                    thickness={4}
+                    color="primary"
+                  /> :
+                 " Se connecter"}
                 </Button>
                 
               </form>
