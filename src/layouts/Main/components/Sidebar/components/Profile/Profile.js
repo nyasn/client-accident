@@ -30,7 +30,7 @@ const Profile = props => {
   
   const user = {
     name: AppUser.nom,
-    avatar: '/images/avatars/avatar_5.png',
+    avatar: '/images/avatars/avatar.jpg',
     bio: AppUser.roles,
     email: AppUser.email,
   };

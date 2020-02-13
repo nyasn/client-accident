@@ -18,6 +18,9 @@ const useStyles = makeStyles(theme => ({
   },
   signOutButton: {
     marginLeft: theme.spacing(1)
+  },
+  logo:{
+    filter: 'invert(48%) sepia(86%) saturate(349%) hue-rotate(86deg) brightness(100) contrast(119%)'
   }
 }));
 
@@ -46,9 +49,9 @@ const Topbar = props => {
     >
       <Toolbar>
         <RouterLink to="/">
-          <img
+          <img className={classes.logo}
             alt="Logo"
-            src="/images/logos/logo--white.svg"
+            src="/images/logos/crash.svg"
           />
         </RouterLink>
         <div className={classes.flexGrow} />
